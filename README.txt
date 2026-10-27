@@ -1,6 +1,10 @@
-NAWAB RIDE V3 - ANDROID PROJECT
-This is Android Studio source code, NOT an APK.
-To build: open this folder in Android Studio, allow Gradle sync and Android SDK 35 install, then Build > Build APK(s).
-APK will appear at app/build/outputs/apk/debug/app-debug.apk.
-Offline storage: WebView localStorage; backup using JSON regularly.
-Note: File downloads from inside WebView may require additional native DownloadManager integration; the existing CSV/JSON export buttons are designed for browsers and may not download in this APK wrapper.
+Nawab Ride V4 - Android app source
+
+How to build:
+1. Copy the entire project contents into your existing GitHub repository.
+2. GitHub Actions > Build Nawab Ride APK > Run workflow.
+3. When successful, download the NawabRide-V4-APK artifact and extract app-debug.apk.
+
+The app stores records and goals locally in Android WebView storage.
+Use Settings > Export Backup regularly. Uninstalling the app or clearing its data may erase records.
+The APK is a debug build for personal testing, not a Play Store release.
