@@ -1,0 +1,1 @@
+Nawab Ride V5: optional SMS transaction review. Enable in Settings > Bank SMS Tracking. Approve each transaction manually. No SMS body is saved, only parsed amount/type/date/sender and a dedupe hash. Requires RECEIVE_SMS permission. Private APK; Google Play SMS permission policy is restrictive. Import/export existing V4 data remains available. Build using GitHub Actions.
