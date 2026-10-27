@@ -22,7 +22,7 @@ public class BankSmsReceiver extends BroadcastReceiver {
   if(lower.matches("(?s).*(otp|one.time.password|verification code|do not share|payment request|collect request).*"))return;
   boolean credit=lower.matches("(?s).*(credited|credit to|deposited|received|cr\\b).*"), debit=lower.matches("(?s).*(debited|debit from|spent|withdrawn|dr\\b).*" );
   if(credit==debit)return;
-  Matcher amount=Pattern.compile("(?i)(?:inr|rs\.?|₹)\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)").matcher(msg);
+  Matcher amount=Pattern.compile("(?i)(?:inr|rs\\.?|₹)\\s*([0-9][0-9,]*(?:\\.[0-9]{1,2})?)").matcher(msg);
   if(!amount.find())return;
   double value;try{value=Double.parseDouble(amount.group(1).replace(",",""));}catch(Exception e){return;}if(value<=0||value>100000000)return;
   try{
