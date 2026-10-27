@@ -18,8 +18,8 @@ jobs:
           java-version: '17'
       - name: Install Android SDK
         run: |
-          echo y | sdkmanager --licenses >/dev/null || true
-          sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+          echo y | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'platforms;android-35' 'build-tools;35.0.0'
       - name: Set up compatible Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
